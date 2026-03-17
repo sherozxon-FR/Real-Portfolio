@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
 import Header from '../components/header/Header'
-import styles from './MainLayout.module.css'
+import styles from '../MainLayout.module.css'
 
 function MainLayout() {
   return (
