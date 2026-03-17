@@ -1,0 +1,16 @@
+.layout {
+    min-height: 100vh;
+    background: #f0f4f8;
+}
+
+.main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 108px 2rem 4rem;
+}
+
+@media (max-width: 600px) {
+    .main {
+        padding: 96px 1rem 3rem;
+    }
+}
