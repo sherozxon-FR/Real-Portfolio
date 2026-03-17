@@ -11,8 +11,8 @@ const Home = () => {
 
       {/* Hero */}
       <section className={styles.hero}>
-        <p className={styles.greeting}>Salom, men —</p>
-        <h1 className={styles.name}>Sherozxon</h1>
+        <p className={styles.greeting}></p>
+        <h1 className={styles.name}> Frontend</h1>
         <h2 className={styles.role}>Frontend Developer</h2>
         <p className={styles.bio}>
           Zamonaviy va chiroyli interfeyslar yarataman. React, CSS va ijodiy

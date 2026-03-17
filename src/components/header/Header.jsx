@@ -4,13 +4,13 @@ import styles from "./Header.module.css"
 import { FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa"
 
 function Header() {
-  const [isDark, setIsDark] = useState(false)
+  // const [isDark, setIsDark] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const toggleDark = () => {
-    setIsDark(prev => !prev)
-    document.documentElement.classList.toggle("dark")
-  }
+  // const toggleDark = () => {
+  //   setIsDark(prev => !prev)
+  //   document.documentElement.classList.toggle("dark")
+  // }
 
   const navLinks = [
     { to: "/", label: "Home", end: true },
@@ -22,7 +22,11 @@ function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <span className={styles.logoText}>Sherozxon</span>
+        <span className={styles.logoText}>
+          <NavLink to='/' className={styles.logoLink}>
+            sherozxon
+          </NavLink>
+        </span>
       </div>
 
       {/* Desktop nav */}
@@ -45,10 +49,11 @@ function Header() {
 
         <button
           className={styles.darkMode}
-          onClick={toggleDark}
+          // onClick={toggleDark}
           aria-label="Toggle dark mode"
         >
-          {isDark ? <FaSun size={18} /> : <FaMoon size={18} />}
+          {/* {isDark ? <FaSun size={18} /> : <FaMoon size={18} />} */}
+          <FaMoon size={18} />
         </button>
       </nav>
 

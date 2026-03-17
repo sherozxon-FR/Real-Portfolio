@@ -1,16 +1,19 @@
+/* ═══════════════════════════════════════
+   HEADER
+═══════════════════════════════════════ */
 .header {
     position: fixed;
     top: 20px;
+    left: 0;
+    right: 0;
     z-index: 1000;
+    width: 80%;
+    height: 70px;
+    margin: 0 auto;
+    padding: 0 1.75rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    height: 70px;
-    padding: 0 1.75rem;
     background: rgba(255, 255, 255, 0.65);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
@@ -19,7 +22,9 @@
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
 }
 
-/* ── Logo ── */
+/* ═══════════════════════════════════════
+   LOGO
+═══════════════════════════════════════ */
 .logo {
     display: flex;
     align-items: center;
@@ -32,27 +37,35 @@
     color: #111;
 }
 
-
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    50% {
-        opacity: 0.4;
-        transform: scale(0.7);
-    }
+.logoLink {
+    color: #111;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+  text-transform: capitalize;
+    transition: opacity 0.2s ease;
 }
 
-/* ── Nav ── */
+
+
+
+
+/* ═══════════════════════════════════════
+   NAV
+═══════════════════════════════════════ */
 .nav {
     display: flex;
     align-items: center;
+    gap: 0.7rem;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
     gap: 0.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .link {
@@ -76,20 +89,9 @@
     background: rgba(16, 185, 129, 0.1);
 }
 
-/* 
-.link.active::after {
-    content: '';
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 3px;
-    border-radius: 2px;
-    background: #10b981;
-} */
-
-/* ── Dark mode button ── */
+/* ═══════════════════════════════════════
+   DARK MODE BUTTON
+═══════════════════════════════════════ */
 .darkMode {
     display: flex;
     align-items: center;
@@ -109,131 +111,9 @@
     transform: rotate(20deg);
 }
 
-/* ── Responsive ── */
-@media (max-width: 600px) {
-    .header {
-        width: 90%;
-        margin: 0 auto;
-        
-        padding: 0 1rem;
-        top: 10px;
-    }
-
-    .link {
-        font-size: 0.78rem;
-        padding: 0.35rem 0.6rem;
-    }
-
-    .logoText {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .header {
-        width: 90%;
-        padding: 0 0.75rem;
-        height: 60px;
-        border-radius: 14px;
-    }
-
-    .nav {
-        gap: 0.1rem;
-    }
-
-    .link {
-        font-size: 0.72rem;
-        padding: 0.3rem 0.5rem;
-    }
-
-    .logoText {
-        font-size: 0.95rem;
-    }
-
-    .darkMode {
-        width: 30px;
-        height: 30px;
-        font-size: 0.85rem;
-    }
-}
-
-@media (max-width: 380px) {
-    .header {
-        width: 90%;
-        padding: 0 0.6rem;
-        height: 54px;
-        border-radius: 12px;
-        top: 8px;
-    }
-
-    .link {
-        font-size: 0.65rem;
-        padding: 0.25rem 0.4rem;
-    }
-
-    .logoText {
-        font-size: 0.85rem;
-    }
-
-    .logoDot {
-        width: 5px;
-        height: 5px;
-    }
-
-    .darkMode {
-        width: 26px;
-        height: 26px;
-        font-size: 0.75rem;
-        border-radius: 8px;
-    }
-}
-
-@media (max-width: 320px) {
-    .header {
-        width: 90%;
-        padding: 0 0.5rem;
-        height: 50px;
-        border-radius: 10px;
-        top: 6px;
-    }
-
-    .nav {
-        gap: 0;
-    }
-
-    .link {
-        font-size: 0.6rem;
-        padding: 0.2rem 0.35rem;
-        border-radius: 7px;
-    }
-
-    .logoText {
-        font-size: 0.8rem;
-    }
-
-    .logoDot {
-        display: none;
-    }
-
-    .darkMode {
-        width: 24px;
-        height: 24px;
-        font-size: 0.7rem;
-        border-radius: 6px;
-    }
-}
-
-/* navList — li elementlari uchun */
-.navList {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Mobile button — default yashirin */
+/* ═══════════════════════════════════════
+   MOBILE MENU BUTTON
+═══════════════════════════════════════ */
 .mobileMenuButton {
     display: none;
     align-items: center;
@@ -251,37 +131,152 @@
     background: rgba(0, 0, 0, 0.08);
 }
 
-/* Mobile dropdown menu */
+/* ═══════════════════════════════════════
+   MOBILE DROPDOWN
+═══════════════════════════════════════ */
 .mobileMenu {
     position: absolute;
     top: calc(100% + 10px);
     left: 0;
     right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.75rem;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(18px);
     border: 1px solid rgba(255, 255, 255, 0.9);
     border-radius: 14px;
-    padding: 0.75rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* Breakpoint: 768px dan kichik bo'lsa */
+/* ═══════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════ */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.7);
+    }
+}
+
+/* ═══════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════ */
 @media (max-width: 768px) {
+    .header {
+        position: relative;
+    }
+
     .nav {
         display: none;
-        /* desktop nav yashiriladi */
     }
 
     .mobileMenuButton {
         display: flex;
-        /* mobile button ko'rinadi */
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        width: 90%;
+        height: 65px;
+        top: 10px;
+        padding: 0 1rem;
     }
 
+    .logoText {
+        font-size: 1rem;
+    }
+
+    .link {
+        font-size: 0.78rem;
+        padding: 0.35rem 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
     .header {
-        position: relative;
-        /* dropdown to'g'ri joylashishi uchun */
+        height: 60px;
+        border-radius: 14px;
+        padding: 0 0.75rem;
+    }
+
+    .nav {
+        gap: 0.1rem;
+    }
+
+    .logoText {
+        font-size: 0.95rem;
+    }
+
+    .link {
+        font-size: 0.72rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .darkMode {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 380px) {
+    .header {
+        height: 54px;
+        top: 8px;
+        border-radius: 12px;
+        padding: 0 0.6rem;
+    }
+
+    .logoText {
+        font-size: 0.85rem;
+    }
+
+    .link {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.4rem;
+    }
+
+    .darkMode {
+        width: 26px;
+        height: 26px;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header {
+        height: 50px;
+        top: 6px;
+        border-radius: 10px;
+        padding: 0 0.5rem;
+    }
+
+    .nav {
+        gap: 0;
+    }
+
+    .logoText {
+        font-size: 0.8rem;
+    }
+
+    .link {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.35rem;
+        border-radius: 7px;
+    }
+
+    .darkMode {
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
     }
 }
