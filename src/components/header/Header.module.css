@@ -32,15 +32,7 @@
     color: #111;
 }
 
-.logoDot {
-    display: inline-block;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #10b981;
-    margin-bottom: 2px;
-    animation: pulse 2.5s ease-in-out infinite;
-}
+
 
 @keyframes pulse {
 
@@ -84,6 +76,7 @@
     background: rgba(16, 185, 129, 0.1);
 }
 
+/* 
 .link.active::after {
     content: '';
     position: absolute;
@@ -94,7 +87,7 @@
     height: 3px;
     border-radius: 2px;
     background: #10b981;
-}
+} */
 
 /* ── Dark mode button ── */
 .darkMode {
@@ -225,5 +218,68 @@
         height: 24px;
         font-size: 0.7rem;
         border-radius: 6px;
+    }
+}
+
+/* navList — li elementlari uchun */
+.navList {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobile button — default yashirin */
+.mobileMenuButton {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.mobileMenuButton:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+/* Mobile dropdown menu */
+.mobileMenu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 14px;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Breakpoint: 768px dan kichik bo'lsa */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        /* desktop nav yashiriladi */
+    }
+
+    .mobileMenuButton {
+        display: flex;
+        /* mobile button ko'rinadi */
+    }
+
+    .header {
+        position: relative;
+        /* dropdown to'g'ri joylashishi uchun */
     }
 }
