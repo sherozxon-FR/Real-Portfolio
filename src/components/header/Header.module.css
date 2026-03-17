@@ -112,7 +112,9 @@
 /* ── Responsive ── */
 @media (max-width: 600px) {
     .header {
-        width: 94%;
+        width: 90%;
+        margin: 0 auto;
+        
         padding: 0 1rem;
         top: 10px;
     }
@@ -129,7 +131,7 @@
 
 @media (max-width: 480px) {
     .header {
-        width: 96%;
+        width: 90%;
         padding: 0 0.75rem;
         height: 60px;
         border-radius: 14px;
@@ -157,7 +159,7 @@
 
 @media (max-width: 380px) {
     .header {
-        width: 97%;
+        width: 90%;
         padding: 0 0.6rem;
         height: 54px;
         border-radius: 12px;
@@ -188,7 +190,7 @@
 
 @media (max-width: 320px) {
     .header {
-        width: 98%;
+        width: 90%;
         padding: 0 0.5rem;
         height: 50px;
         border-radius: 10px;
