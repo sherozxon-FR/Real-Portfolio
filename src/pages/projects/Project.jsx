@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import { useState, useRef } from 'react'
 import styles from './Project.module.css'
 
 function Project() {
@@ -65,7 +65,7 @@ function Project() {
 
           />
 
-          <button className={styles.button}  type='submit'>Submit</button>
+          <button className={styles.button} type='submit'>Submit</button>
         </form>
       </div>
     </div>
