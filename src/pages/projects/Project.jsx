@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import styles from './Project.module.css'
+import styles from './loyha.module.css'
 
 function Project() {
 
