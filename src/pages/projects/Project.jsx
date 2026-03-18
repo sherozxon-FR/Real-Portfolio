@@ -65,7 +65,7 @@ function Project() {
 
           />
 
-          <button className={styles.button} disabled type='submit'>Submit</button>
+          <button className={styles.button}  type='submit'>Submit</button>
         </form>
       </div>
     </div>
