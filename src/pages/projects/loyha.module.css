@@ -1,9 +1,11 @@
 .wrapper {
-    min-height: 100vh;
+    height: auto;
+    padding-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'DM Mono', 'Courier New', monospace;
+    animation: fadeIn 0.6s ease both;
 }
 
 .card {
@@ -13,6 +15,7 @@
     width: 100%;
     max-width: 420px;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
+    animation: slideUp 0.6s ease both;
 }
 
 .title {
@@ -22,6 +25,7 @@
     color: #6366f1;
     margin: 0 0 2rem 0;
     font-weight: 400;
+    animation: slideUp 0.6s ease 0.1s both;
 }
 
 .form {
@@ -42,6 +46,7 @@
     color: #888;
     font-size: 0.8rem;
     letter-spacing: 0.05em;
+    animation: slideUp 0.6s ease 0.2s both;
 }
 
 .fileLabel:hover {
@@ -82,6 +87,11 @@
     transition: border-color 0.2s, box-shadow 0.2s;
     width: 100%;
     box-sizing: border-box;
+    animation: slideUp 0.6s ease 0.3s both;
+}
+
+.input:nth-child(2) {
+    animation-delay: 0.4s;
 }
 
 .input::placeholder {
@@ -109,6 +119,7 @@
     text-transform: uppercase;
     cursor: pointer;
     transition: background 0.2s, transform 0.1s;
+    animation: slideUp 0.6s ease 0.5s both;
 }
 
 .button:hover {
@@ -117,4 +128,26 @@
 
 .button:active {
     transform: scale(0.98);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
