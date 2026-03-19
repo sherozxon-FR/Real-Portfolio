@@ -1,56 +1,18 @@
 
 import { useState } from 'react'
+import Image from '../../image/image.png'
 import styles from './Project.module.css'
 
 const projects = [
   {
     id: 1,
-    img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80',
+    img: Image,
     title: 'E-Commerce Platform',
-    description: 'React va Node.js asosida qurilgan to\'liq funksional onlayn do\'kon. Foydalanuvchi autentifikatsiyasi, savat va to\'lov tizimi mavjud.',
-    link: 'https://github.com/',
-    tag: 'React',
-  },
-  {
-    id: 2,
-    img: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&q=80',
-    title: 'Mobile Task App',
-    description: 'Flutter bilan yozilgan vazifalar boshqaruv ilovasi. Real-time sinxronizatsiya va offline rejim qo\'llab-quvvatlanadi.',
-    link: 'https://github.com',
-    tag: 'Flutter',
-  },
-  {
-    id: 3,
-    img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',
-    title: 'Analytics Dashboard',
-    description: 'D3.js va Vue.js yordamida qurilgan interaktiv ma\'lumotlar vizualizatsiya paneli. Jonli grafik va statistikalar.',
-    link: 'https://github.com',
-    tag: 'Vue.js',
-  },
-  {
-    id: 4,
-    img: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&q=80',
-    title: 'AI Image Generator',
-    description: 'Python FastAPI backend va Next.js frontend bilan ishlangan sun\'iy intellekt asosidagi rasm generatsiya xizmati.',
-    link: 'https://github.com',
-    tag: 'Next.js',
-  },
-  {
-    id: 5,
-    img: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&q=80',
-    title: 'Real-time Chat',
-    description: 'Socket.io va Express.js orqali qurilgan real vaqtli chat ilovasi. Guruh xonalari va fayl almashish imkoniyatlari bor.',
-    link: 'https://github.com',
-    tag: 'Node.js',
-  },
-  {
-    id: 6,
-    img: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&q=80',
-    title: 'Crypto Tracker',
-    description: 'Kripto valyutalar narxini kuzatuvchi dashboard. WebSocket orqali jonli narxlar va portfolio hisob-kitobi.',
-    link: 'https://github.com',
-    tag: 'TypeScript',
-  },
+    description: 'javascript va localStorage asosida qurilgan to\'liq funksional onlayn do\'kon. ',
+    link: 'https://shop-loyhasi.vercel.app/',
+    tag: 'Javascript',
+  }
+
 ]
 
 function ProjectCard({ project, index }) {
@@ -88,7 +50,10 @@ function ProjectCard({ project, index }) {
 }
 
 function Project() {
-  const [OpenProject, setOpenProject] = useState(false)
+  const [OpenProject, setOpenProject] = useState(true)
+
+
+
   return (
     <div className={styles.page}>
       <header className={styles.header}>
